@@ -1,5 +1,7 @@
 const gulp = require('gulp')
 const uglify = require('gulp-uglify')
+const uglifycss = require('gulp-uglifycss')
+const concat = require('gulp-concat')
 
 gulp.task('deps', ['deps.js', 'deps.css', 'deps.fonts'])
 
@@ -42,5 +44,5 @@ gulp.task('deps.fonts', () => {
         'node_modules/admin-lte/bootstrap/fonts/*.*'
     ]
     )
-    .pipe(gulp.dest('public.assets/fonts'))
+    .pipe(gulp.dest('public/assets/fonts'))
 })
