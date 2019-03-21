@@ -7,12 +7,9 @@
     
     function addMsg(msgs, title, method){
          if(msgs instanceof Array ){
-             console.log('array')
-             console.log(msgs)
              msgs.forEach(msg => toastr[method](msg, title))
-            
+           
          }else{
-            console.log('nao array')
              toastr[method](msgs,title)
          }
      } 
