@@ -14,11 +14,7 @@
             $http.get(url).then(function(response){
                  vm.billingCycle = {}
                  vm.billingCycles = response.data
-                 tabs.show(vm,{tabList:true,tabCreate:true})
-                 console.log('tabList:' +  vm.tabList)
-                 console.log('tabCreate:' +  vm.tabCreate)
-                 console.log('tabUpdate:' +  vm.tabUpdate)
-                 console.log('tabDelete:' +  vm.tabDelete)
+                 tabs.show(vm,{tabList:true,tabCreate:true})                 
             })
         }
 
@@ -31,6 +27,16 @@
                 msgs.addError(response.data.errors)
             })
 
+        }
+
+        vm.showTabUpdate = function (billingCycle) {
+                vm.billingCycle = billingCycle   
+                tabs.show(vm,{tabUpdate:true})     
+        }
+
+        vm.showTabDelete = function(billingCycle){
+            vm.billingCycle = billingCycle
+            tabs.show(vm,{tabDelete:true})
         }
 
         vm.refresh()
