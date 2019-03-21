@@ -5,9 +5,9 @@
         <field id="year" label="Ano" grid="12 6 4" placeholder="Informe o Ano" type="number" model="bcCtrl.billingCycle.year"></field>
     </div>
     <div class="box-footer">
-        <div class="btn btn-primary" ng-click="bcCtrl.create()">Incluir</div>
-        <div class="btn btn-info">Alterar</div>
-        <div class="btn btn-danger">Excluir</div>
-        <div class="btn btn-default">Cancelar</div>
+        <div class="btn btn-primary" ng-click="bcCtrl.create()" ng-if="bcCtrl.tabList">Incluir</div>
+        <div class="btn btn-info" ng-if="bcCtrl.tabUpdate">Alterar</div>
+        <div class="btn btn-danger" ng-if="bcCtrl.tabDelete">Excluir</div>
+        <div class="btn btn-default" >Cancelar</div>
     </div>
 </div>

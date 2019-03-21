@@ -2,10 +2,11 @@
     angular.module('primeiraApp').controller('BillingCycleCtrl', [
         '$http',
         'msgs',
+        'tabs',
         BillingCycleController
     ])
 
-    function BillingCycleController($http, msgs) {
+    function BillingCycleController($http, msgs, tabs) {
         const vm = this
         const url = 'http://localhost:3003/api/billingCycles'
 
@@ -13,6 +14,11 @@
             $http.get(url).then(function(response){
                  vm.billingCycle = {}
                  vm.billingCycles = response.data
+                 tabs.show(vm,{tabList:true,tabCreate:true})
+                 console.log('tabList:' +  vm.tabList)
+                 console.log('tabCreate:' +  vm.tabCreate)
+                 console.log('tabUpdate:' +  vm.tabUpdate)
+                 console.log('tabDelete:' +  vm.tabDelete)
             })
         }
 
