@@ -9,7 +9,8 @@
     </div>
     <div class="box-footer">
         <div class="btn btn-primary" ng-click="bcCtrl.create()" ng-if="bcCtrl.tabList">Incluir</div>
-        <div class="btn btn-info" ng-if="bcCtrl.tabUpdate">Alterar</div>
+        <div class="btn btn-info" ng-if="bcCtrl.tabUpdate"
+        ng-click="bcCtrl.update()">Alterar</div>
         <div class="btn btn-danger" ng-if="bcCtrl.tabDelete" ng-click="bcCtrl.delete()">Excluir</div>
         <div class="btn btn-default" ng-click="bcCtrl.refresh()">Cancelar</div>
     </div>
