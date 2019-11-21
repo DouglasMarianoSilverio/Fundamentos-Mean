@@ -21,7 +21,6 @@ jobs:
       run: |
         cd angular1 
         npm ci
-        npm run build --if-present
-        npm test
+        npm run build --if-present        
       env:
         CI: true
